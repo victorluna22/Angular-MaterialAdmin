@@ -1,0 +1,115 @@
+<div class="container">
+
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Editar Perfil <small>Click on columns header to sort the table.</small></h2>
+        </div>
+        <div class="card-body card-padding">
+            <p class="c-black f-500">Basic Text Feilds with different sizes by height and column.</p>
+
+            <div class="row">
+            	<div class="col-sm-8">
+	            	<div class="row">
+			            <div class="col-sm-6">
+				            <div class="form-group">
+				                <div class="fg-line">
+				                    <input type="text" class="form-control input-lg" ng-model="profile.name" placeholder="Nome">
+				                </div>
+				            </div>
+			            </div>
+
+			            <div class="col-sm-6">
+				            <div class="form-group">
+				                <div class="fg-line">
+				                    <input type="text" class="form-control input-lg" ng-model="profile.email" placeholder="Email">
+				                </div>
+				            </div>
+				        </div>
+			        </div>
+            		<div class="row">
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.cnpj" placeholder="CNPJ">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.phone" placeholder="Telefone">
+		                        </div>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.street" placeholder="Logradouro">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.number" placeholder="Número">
+		                        </div>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.complement" placeholder="Complemento">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.cep" placeholder="CEP">
+		                        </div>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="row">
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.neighborhood" placeholder="Bairro">
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-sm-6">
+		                    <div class="form-group">
+		                		<div class="fg-line">
+		                            <input type="text" class="form-control input-lg" ng-model="profile.city" placeholder="Cidade">
+		                        </div>
+		                    </div>
+		                </div>
+	                </div>
+                </div>
+                
+            	<div class="col-sm-4">
+	                <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left:60px">
+		                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="line-height: 150px;"></div>
+		                <div>
+		                    <span class="btn btn-primary btn-file waves-effect">
+		                        <span class="fileinput-new">Select image</span>
+		                        <span class="fileinput-exists">Change</span>
+		                        <input type="hidden" value="" name="..."><input type="file" name="">
+		                    </span>
+		                    <a href="#" class="btn btn-danger fileinput-exists waves-effect" data-dismiss="fileinput">Remove</a>
+		                </div>
+		            </div>
+		        </div>
+            </div>
+            <div class="row">
+            	<button class="btn btn-primary btn-block waves-effect">Atualizar</button>
+            </div>
+        </div>
+    </div>
+</div>

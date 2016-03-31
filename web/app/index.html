@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" ng-app="stepBoxApp" data-ng-controller="materialadminCtrl as mactrl" data-ng-class="{ 'login-content': login_screen}">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+    <link href="vendors/bower_components/angular-loading-bar/src/loading-bar.css" rel="stylesheet">
+    <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <link href="styles/app.min.1.css" rel="stylesheet" id="app-level">
+    <link href="styles/app.min.2.css" rel="stylesheet">
+    <link href="styles/demo.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body data-ng-class="{ 'sw-toggled': mactrl.layoutType === '1', 'login-content': login_screen}">
+
+    <div id="cont" ng-if="login_screen" data-ng-include="'views/login.html'" data-ng-controller="loginCtrl as lctrl" data-ng-class="{'login-content': login_screen}">
+        
+    </div>
+  
+    <header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'views/header.html'" data-ng-controller="headerCtrl as hctrl" ng-if="!login_screen"></header>
+
+    <section id="main" ng-if="!login_screen">
+        <aside id="sidebar" data-ng-include="'views/sidebar-left.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.left === true }"></aside>
+
+        <aside id="chat" data-ng-include="'views/chat.html'" data-ng-class="{ 'toggled': mactrl.sidebarToggle.right === true }"></aside>
+        <section ui-view></section>
+    </section>
+
+      
+
+<footer id="footer" ng-if="!login_screen" data-ng-include="'views/footer.html'"></footer>
+
+    
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- angular do template -->
+    <script src="vendors/bower_components/angular/angular.min.js"></script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- Core -->
+    <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+
+    <!-- Angular -->
+    <script src="vendors/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="vendors/bower_components/angular-resource/angular-resource.min.js"></script>
+    
+    <!-- Angular Modules -->
+    <script src="vendors/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="vendors/bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    <script src="vendors/bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="vendors/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Common Vendors -->
+    <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+    <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/bower_components/ng-table/dist/ng-table.min.js"></script>
+   
+
+    <!-- Placeholder for IE9 -->
+    <!--[if IE 9 ]>
+        <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <![endif]-->
+
+    <!-- Using below vendors in order to avoid misloading on resolve -->
+    <script src="vendors/bower_components/flot/jquery.flot.js"></script>
+    <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+    <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+    <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="vendors/bower_components/flot-orderBars/js/jquery.flot.orderBars.js"></script>
+    <script src="vendors/bower_components/flot/jquery.flot.pie.js"></script>
+    <script src="vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="vendors/bower_components/angular-nouislider/src/nouislider.min.js"></script>
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.config.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/material.js"></script>
+    <script src="scripts/services/auth.js"></script>
+    <script src="scripts/services/api.js"></script>
+    
+    <script src="scripts/controllers/register.js"></script>
+    <script src="scripts/controllers/employees.js"></script>
+    <script src="scripts/controllers/profile.js"></script>
+    <!-- endbuild -->
+
+    <script src="js/modules/template.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/modules/charts/flot.js"></script>
+    <script src="js/modules/charts/other-charts.js"></script>
+    <script src="js/modules/form.js"></script>
+    <script src="js/modules/media.js"></script>
+    <script src="js/modules/components.js"></script>
+    <script src="js/modules/calendar.js"></script>
+    <script src="js/modules/demo.js"></script>
+</body>
+</html>
